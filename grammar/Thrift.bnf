@@ -49,7 +49,7 @@ private topLevelElement ::=  Include | Namespace |
 
 private topLevelRecover ::= !('const' | 'cpp_include' | 'enum' | 'exception' | 'include' | 'namespace' |
                               'php_namespace' | 'senum' | 'service' | 'struct' | 'typedef' | 'union' |
-                              'xsd_namespace' )
+                              'xsd_namespace' | 'nova_namespace' )
 Include ::=  ('include' | 'cpp_include') Literal {
   pin=1
   methods=[
@@ -57,9 +57,10 @@ Include ::=  ('include' | 'cpp_include') Literal {
     getPath
   ]
 }
-Namespace ::=  std_namespace | php_namespace | xsd_namespace
+Namespace ::=  std_namespace | php_namespace | xsd_namespace | nova_namespace
 private xsd_namespace ::= 'xsd_namespace' Literal {pin=1}
 private php_namespace ::= 'php_namespace' Literal {pin=1}
+private nova_namespace ::= 'nova_namespace' Literal {pin=1}
 private std_namespace ::= 'namespace' (
     ( NamespaceScope Identifier ) |
     ( 'smalltalk.category' STIdentifier ) |
@@ -67,7 +68,7 @@ private std_namespace ::= 'namespace' (
 ) {pin=1}
 
 NamespaceScope  ::=  Multiply | 'cpp' | 'java' | 'py' | 'py.twisted' | 'perl' | 'rb' | 'js' | 'st' |
-                     'cocoa' | 'csharp' | 'c_glib' | 'go' | 'php' | 'delphi'
+                     'cocoa' | 'csharp' | 'c_glib' | 'go' | 'php' | 'delphi' | 'nova'
 
 DefinitionName ::= Identifier
 {implements="com.intellij.psi.PsiNamedElement, com.intellij.navigation.NavigationItem, com.intellij.psi.PsiNameIdentifierOwner" methods=[

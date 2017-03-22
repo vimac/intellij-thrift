@@ -4,6 +4,10 @@
   <description>Support for Thrift language</description>
   <change-notes>
     <![CDATA[
+      <p>0.9.5.nova:</p>
+      <ul>
+        <li>Add Nova Support</li>
+      </ul>
       <p>0.9.5:</p>
       <ul>
         <li>Add Thrift v0.9.2 compiler options</li>
@@ -71,7 +75,7 @@
       </ul>
       ]]>
   </change-notes>
-  <version>0.9.5</version>
+  <version>0.9.5.nova</version>
   <vendor>Twitter, Inc.</vendor>
   <idea-version since-build="145.1"/>
 
