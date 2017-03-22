@@ -113,7 +113,7 @@ class ThriftOutputConsumer extends ProcessAdapter {
     int exitCode = event.getExitCode();
     if (exitCode == 0) {
       try {
-        final FileGeneratedEvent msg = new FileGeneratedEvent();
+        final FileGeneratedEvent msg = new FileGeneratedEvent(null);
 
         collectNewFiles(msg);
 

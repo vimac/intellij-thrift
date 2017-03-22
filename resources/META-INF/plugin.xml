@@ -4,9 +4,14 @@
   <description>Support for Thrift language</description>
   <change-notes>
     <![CDATA[
-      <p>0.9.5.nova:</p>
+      <p>0.9.6.nova:</p>
       <ul>
         <li>Add Nova Support</li>
+      </ul>
+      <p>0.9.6:</p>
+      <ul>
+        <li>Support for generated_annotations=undated</li>
+        <li>Java 6 bytecode level</li>
       </ul>
       <p>0.9.5:</p>
       <ul>
@@ -75,7 +80,7 @@
       </ul>
       ]]>
   </change-notes>
-  <version>0.9.5.nova</version>
+  <version>0.9.6.nova</version>
   <vendor>Twitter, Inc.</vendor>
   <idea-version since-build="145.1"/>
 
